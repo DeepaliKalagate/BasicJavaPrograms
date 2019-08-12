@@ -204,10 +204,12 @@ public class Utility
 			if(leapyear) {
 				if(day<1 || day > 29)
 					return false;
-		}else {
+		}
+		else 
+		{
 			if(day<1 || day >28)
 					return false;
-			}
+		}
 		if(month==4 || month ==6 || month ==9 || month ==11)
 			if(day<1 || day>30)
 				return false; 
@@ -237,6 +239,14 @@ public class Utility
 
 		payment = (principalLoanAmount * r) / (1 - Math.pow(1 + r, -n));
 		return payment;
+	}
+	public String reversed(String str) {
+		String rev=" ";
+		for(int i=str.length();i>0;--i)
+		{
+			rev=rev+(str.charAt(i-1));
+		}
+		return rev;
 	}	
 }	
 	
