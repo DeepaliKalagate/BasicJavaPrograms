@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  
+ *  
+ *  Purpose: Calculate Number of times won, Percent Win and Avg number of bets made. 
+ *
+ *  @author  BridgeLabz
+ *  @version 1.0
+ *  @since   12-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.conditional;
 
 import java.util.Scanner;
