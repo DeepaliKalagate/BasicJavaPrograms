@@ -24,9 +24,9 @@ public class GamlingSimulator {
 		int stake=scanner.nextInt();
 		System.out.println("Enter goal number : ");
 		int goal=scanner.nextInt();
-		System.out.println("Enter number of Days do you want to play: ");
-		int day=scanner.nextInt();
-		conditionalUtility.gamling(stake,goal,day);
+		System.out.println("Enter number of Tries do you want to play: ");
+		int tries=scanner.nextInt();
+		conditionalUtility.gamling(stake,goal,tries);
 		scanner.close();
 	}
 

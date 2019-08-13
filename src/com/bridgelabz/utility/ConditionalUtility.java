@@ -22,17 +22,22 @@ public class ConditionalUtility
 		return true;		
 	}
 
-	public void gamling(int stake, int goal, int day) 
+	public void gamling(int stake, int goal, int tries) 
 	{
 		int win=0;
 		 int trails=0;
-		 for(int i=0;i<day;i++) {
+		 for(int i=0;i<tries;i++) 
+		 {
 			 int money=stake;
-			 while(money>0 && money<goal) {
-				 if(Math.random()>0.5) {
+			 while(money>0 && money<goal)
+			 {
+				 if(Math.random()>0.5) 
+				 {
 					 money++;
 					 trails++;
-				 }else {
+				 }
+				 else 
+				 {
 				 		money--;
 				 		trails++;
 				 	}
@@ -41,22 +46,23 @@ public class ConditionalUtility
 				 win++;	
 		 }
 		 System.out.println("Number of times won: "+win);
-		 System.out.println("Percentage of win: "+win*100/day);
-		 System.out.println("Average no of bets made: "+trails/day);
+		 System.out.println("Percentage of win: "+win*100/tries);
+		 System.out.println("Average no of bets made: "+trails/tries);
 	}
 	
-	public void sqrtNewton(int c) 
+	public double sqrtNewton(int c) 
 	{
-		int t;
+		double t,epsilon;
 		t=c;
-		t=(t/c+c)/2;
-		int epsilon=1+(10^-15);
-		if(Math.abs(t -c/t) > epsilon*t) 
+		t=(c/t+c)/2;
+		epsilon=1*(Math.pow(10, -15));
+		epsilon=1e-15;
+		while(Math.abs(t -c/t) > epsilon*t) 
 		{
-			t=c;
-			t=(t/c+c)/2;
+			t=(c/t+t)/2.0;
 			System.out.println(t);
 		}
+		return t;
 	}
 
 	public int binaryToDecimal(int n) 
@@ -91,8 +97,8 @@ public class ConditionalUtility
         for (int j = i - 1; j >= 0; j--) 
             System.out.print(binaryNum[j]);
 		return num; 
-    } 
-	
+    }
+
 	
 }
 	

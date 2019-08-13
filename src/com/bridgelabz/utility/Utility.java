@@ -10,6 +10,8 @@
  ******************************************************************************/
 package com.bridgelabz.utility;
 
+
+
 public class Utility 
 {
 	public int SumOfIntegers(int firstNumber,int secondNumber)
@@ -100,7 +102,6 @@ public class Utility
 	}
 
 	
-
 	public boolean validateDate(int month,int day)
 	{
 		if(month<1 || month>12)
@@ -247,7 +248,7 @@ public class Utility
 			rev=rev+(str.charAt(i-1));
 		}
 		return rev;
-	}	
+	}
 }	
 	
 	

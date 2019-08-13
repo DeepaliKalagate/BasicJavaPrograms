@@ -22,7 +22,7 @@ public class DecimalToBinary {
 		System.out.println("Enter a number : ");
 		int n=scanner.nextInt();
 		int num=conditionalUtility.decToBinary(n);
-		System.out.println(" is the Binary Number of Decimal Number "+num);
+		System.out.println(" <- is the Binary Number of Decimal Number "+num);
 		scanner.close();
 
 	}

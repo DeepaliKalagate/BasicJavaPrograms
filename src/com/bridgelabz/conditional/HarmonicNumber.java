@@ -25,11 +25,11 @@ public class HarmonicNumber {
 		{
 			if(i!=n)
 			{
-				System.out.println("1/"+i+"+");
+				System.out.print("1/"+i+"+");
 			}
 			else if(i==n)
 			{
-				System.out.println("1/"+i);
+				System.out.print("1/"+i);
 			}
 		}
 		scanner.close();
