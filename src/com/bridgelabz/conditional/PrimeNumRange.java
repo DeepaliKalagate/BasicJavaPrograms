@@ -29,7 +29,7 @@ public class PrimeNumRange {
 			boolean prime = conditionalUtility.primeNum(temp);
 			if(prime)
 			{
-				System.out.println(" Prime number : "+temp);
+				System.out.print("\t"+temp);
 			}
 		}
 	}

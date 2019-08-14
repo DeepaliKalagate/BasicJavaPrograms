@@ -1,7 +1,7 @@
 /******************************************************************************
  *  
  *  
- *  Purpose: Convert Decimal to Binary Number. 
+ *  Purpose: Convert Binary to Decimal Number. 
  *
  *  @author  BridgeLabz
  *  @version 1.0
@@ -14,15 +14,15 @@ import java.util.Scanner;
 
 import com.bridgelabz.utility.ConditionalUtility;
 
-public class DecimalToBinary {
+public class Decimal {
 
 	public static void main(String[] args) {
 		ConditionalUtility conditionalUtility=new ConditionalUtility();
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter a number : ");
 		int n=scanner.nextInt();
-		int num=conditionalUtility.decToBinary(n);
-		System.out.println(" <- is the Binary Number of Decimal Number "+num);
+		int num=conditionalUtility.binaryToDecimal(n);
+		System.out.println("Binary of "+n+" is "+num);
 		scanner.close();
 
 	}
