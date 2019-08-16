@@ -11,7 +11,7 @@ public class Pattern
 		int i,j,k;
 		for(i=0;i<=9;i++)
 		   {
-		    for(j=0;j<2;j++)
+		    for(j=0;j<1;j++)
 		    {
 		    	System.out.print("*");
 		       
@@ -33,7 +33,7 @@ public class Pattern
 		//Function for  print D pattern
 		for( i= 0;i<=4;i++)
 		{
-			for( j=0;j<2;j++)
+			for( j=0;j<1;j++)
 			{
 				System.out.print("*");
 			}
