@@ -19,15 +19,23 @@ public class Quadratic {
 	public static void main(String[] args) {
 		Utility utility= new Utility();
 	    Scanner scanner= new Scanner(System.in);
-		System.out.println("Please enter value of x*x i.e A: ");
-		double a=scanner.nextDouble();
-		System.out.println("Please enter value of x i.e B: ");
-		double b=scanner.nextDouble();
-		System.out.println("Please enter value of constant i.e C: ");
-		double c=scanner.nextDouble();
-		utility.calculate(a,b,c);
+	    int a,b,x,c;
+		double delta,root1,root2;
+		System.out.println("Enter value of A");
+		a = scanner.nextInt();
+		System.out.println("Enetr value of B");
+		b = scanner.nextInt();
+		System.out.println("Enter value of C");
+		c = scanner.nextInt();
+		
+        delta=utility.FindDeltaSquarRoot(a,b,c);
+        System.out.println("Delta"+delta);
+		
+		root1=utility.QuadraticEquation1(a,b,delta);
+		root2=utility.QuadraticEquation2(a,b,delta);
+		
+		System.out.println("Root 1 of X is :"+root1);
+		System.out.println("Root 2 of X is :"+root2);
 		scanner.close();
-
 	}
-
 }

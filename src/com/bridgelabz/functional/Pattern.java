@@ -29,6 +29,7 @@ public class Pattern
 		    }
 		    System.out.println("");
 		   }
+		
 		//Function for  print D pattern
 		for( i= 0;i<=4;i++)
 		{

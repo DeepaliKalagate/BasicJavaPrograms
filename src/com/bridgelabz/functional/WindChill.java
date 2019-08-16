@@ -25,7 +25,8 @@ public class WindChill {
 	    int v=scanner.nextInt();
 	    if (t>50 || 3>v || v>120 ) {
 	    	System.out.println("Please enter the correct value!");
-	    } else {
+	    } else 
+	    {
 	    	double  w= Utility.WindChill(t,v);
 	    	System.out.println("National Weather Service defines the effective temperature (the wind chill) to\n" + 
 	    			"be:"+w);

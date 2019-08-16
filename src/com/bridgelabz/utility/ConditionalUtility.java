@@ -1,5 +1,7 @@
 package com.bridgelabz.utility;
 
+import java.util.Scanner;
+
 public class ConditionalUtility
 {
 //Method for Calculating Power of 2
@@ -139,6 +141,80 @@ public class ConditionalUtility
 				}
 			}
 			return array[i];
+		}
+
+		
+		//Method for ROll Die Program
+		public void SuggestNum(int[] a, int n)
+		{
+			int one=0,two=0,three=0,four=0,five=0,six=0;
+			for(int i=0;i<n;i++)
+				switch(a[i]) 
+				{
+					case 1: one++;
+						break;
+					case 2: two++;
+						break;
+					case 3: three++;
+						break;
+					case 4 :four++;
+						break;
+					case 5: five++;
+						break;
+					case 6 :six++;
+						break;
+				}
+				if(one>=two&&one>=three&&one>=four&&one>=five&&one>=six) 
+					System.out.println("Dice 1 fall maximum times count is : "+one);
+				else if(two>=one&&two>=three&&two>=four&&two>=five&&two>=six) 
+					System.out.println("Dice 2 fall maximum times count is : "+two);
+				else if(three>=one&&three>=two&&three>=four&&three>=five&&three>=six) 
+					System.out.println("Dice 3 fall maximum times count is : "+three);
+				else if(four>=one&&four>=two&&four>=three&&four>=five&&four>=six) 
+					System.out.println("Dice 4 fall maximum times count is : "+four);
+				else if(five>=one&&five>=two&&five>=three&&five>=four&&five>=six) 
+					System.out.println("Dice 5 fall maximum times count is : "+five);
+				else 
+				System.out.println("Dice 6 fall maximum times count is : "+six);
+		}
+
+		//Method for Sin Program
+		public double CalculateAngleX(int x) 
+		{
+			return x%(2*180);
+		}
+
+		public void PrintSinXSeries(double angleX, int noOddSeries) 
+		{
+			int count=1;
+
+			System.out.print("Sin("+angleX+") = ");
+			System.out.print(angleX +" - ");
+			for(int i=3;i<=noOddSeries;) 
+			{
+				if(count%2!=0) 
+				{
+					System.out.print(Math.pow(angleX, i)+" / "+calculateFactorial(i));
+					if(i!=noOddSeries) 
+					{
+						System.out.print(" + ");
+					}
+					
+					count++;
+					
+				}else 
+				{
+					System.out.print(Math.pow(angleX, i)+" / "+calculateFactorial(i));
+					if(i!=noOddSeries) 
+					{
+						System.out.print(" - ");	
+					}
+					count++;
+				}
+				i=i+2;
+				
+			}
+			
 		}
 }
 	

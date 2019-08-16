@@ -9,11 +9,9 @@
  *
  ******************************************************************************/
 package com.bridgelabz.utility;
-
-
-
 public class Utility 
 {
+	//Method for Sum of Integers Program
 	public int SumOfIntegers(int firstNumber,int secondNumber)
 	{
 		int result=firstNumber+secondNumber;
@@ -35,7 +33,7 @@ public class Utility
 		return result;
 	}
 	
-	
+	//Method for Arithmetic Operation perform with Integer Numbers
 	public int IntOpt1(int first, int second, int third)
 	{
 		
@@ -63,7 +61,7 @@ public class Utility
 	
 	
 	
-	
+	//Method for Arithmetic Operation perform with Double Numbers
 	public double DoubleOpt1(double first, double second, double third)
 	{
 		
@@ -91,7 +89,7 @@ public class Utility
 	
 	
 	
-	
+	//Method for to check LeapYear
 	public static boolean LeapYear(int year)
 	{
 		if(((year%4==0)&&(year%100!=0))||(year%400==0))
@@ -101,7 +99,7 @@ public class Utility
 		return false;
 	}
 
-	
+	//Method for checking Spring Season
 	public boolean validateDate(int month,int day)
 	{
 		if(month<1 || month>12)
@@ -127,35 +125,30 @@ public class Utility
 	
 	
 	
-	
-	public void calculate(Double a , Double b ,Double c)
+	//Method for Calculate Quadratic Equation
+	public double FindDeltaSquarRoot(int a, int b, int c)
 	{
-		double root1, root2 ;
-		double delta =b*b + 4* a *c;
-		if(delta >0)
-		{
-		    root1=(-b + Math.sqrt(delta))/2*a;
-		    root2=(-b - Math.sqrt(delta))/2*a;
-		    System.out.printf("Two roots of Equation " +a+"x*x+"+b+"x+"+c+"is %f  %f:",root1,root2);
-		}
-		if(delta==0)
-		{
-		    root1=-b/2*a;
-		    root2=root1;
-		    System.out.printf("Two roots of Equation " +a+"x*x+"+b+"x+"+c+"is %f  %f :",root1,root2);
-		}
-		if(delta<0)
-		{
-		    double realpart=-b/2*a;
-		    double imagpart=Math.sqrt(delta)/2*a;
-		    root1=realpart+imagpart;
-		    root2=realpart-imagpart;
-		    System.out.printf("Two roots of Equation " +a+"x*x+"+b+"x+"+c+"is %f  %f :",root1,root2);
-		}
+		double delt = ((b * b) - (4 * a * c));
+		double delta = Math.abs(delt);
+		return delta;
+	}
+	public double QuadraticEquation1(int a, int b, double delta) 
+	{
+		double root1, d;
+		d = Math.sqrt(delta);
+		root1 = (-b + d) / (2 * a);
+		return root1;
+	}
+	public double QuadraticEquation2(int a, int b, double delta) 
+	{
+		double root2, d;
+		d = Math.sqrt(delta);
+		root2 = (-b - d) / (2 * a);
+		return root2;
 	}
 	
-	
-	
+
+	//Method for Calculate Distance
 	public double Euclidean(double x, double y ) 
 	{
 		 double result;
@@ -164,7 +157,7 @@ public class Utility
 	}
 	
 	
-	
+	//Method for Stats5 Generate random  Numbers
 	public float random(int  max , int min ) 
 	{
 		 int range = max;
@@ -182,7 +175,7 @@ public class Utility
 	}
 	
 	
-	
+	//Method for checking Wind Chill
 	public static double WindChill(int t, int v)
 	{
 			double x= Math.pow(v, 0.16);
@@ -191,7 +184,7 @@ public class Utility
 			
 	}
 	
-	
+	//Method for checking DayOfWeek
 	public boolean validateDate(int month,int day, int year)
 	{
 		if (year<1582)
@@ -244,7 +237,8 @@ public class Utility
 	
 	
 	//Function for Reversed String 
-	public String reversed(String str) {
+	public String reversed(String str) 
+	{
 		String rev=" ";
 		for(int i=str.length();i>0;--i)
 		{
